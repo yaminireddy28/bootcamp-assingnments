@@ -1,0 +1,70 @@
+1.Single level
+
+class book{
+    void theme(){
+       System.out.println("It's interesting");
+    }
+}
+class Main extends book{
+        public static void main(String[]args){
+        Main obj=new Main();
+        obj.theme();
+
+    }
+}   
+
+
+2.Hierarichal level
+
+class book{
+    void theme(){
+        System.out.println("It is interesting");
+    }
+}
+class sherlockholmes extends book{
+    void cost(){
+        System.out.println("It costs less");
+    }
+}
+class harryporter extends sherlockholmes{
+    void weight(){
+        System.out.println("It has limited pages");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        harryporter harryporter=new harryporter();
+        harryporter.weight();
+        harryporter.theme();
+
+        sherlockholmes sherlockholmes=new sherlockholmes();
+        sherlockholmes.cost();
+    }
+}
+
+3.Multi level
+class book{
+    void theme(){
+        System.out.println("It is interesting");
+        }
+}
+class sherlockholmes extends book{
+    void cost(){
+        System.out.println("It costs less");
+    }
+}
+class romeojuliet extends book{
+    void weight(){
+        System.out.println("It has limited pages");
+    }
+}
+class Main{
+    public static void main (String[]args){
+    romeojuliet romeojuliet=new romeojuliet();
+    romeojuliet.weight();
+
+    sherlockholmes sherlockholmes=new sherlockholmes();
+    sherlockholmes.cost();
+    }
+}
+
